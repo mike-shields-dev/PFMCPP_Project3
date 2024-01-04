@@ -83,51 +83,51 @@ Main Object: Car Interior
         Name 4 nouns you'll find on the [Sub Object]
             1) paddle shifters
             2) 'cruise control' controls
-            3) 
-            4) 
+            3) horn
+            4) indicators
         Name 2 actions that the [Sub Object] can do:
             1) adjust cruise control settings.
-            2)
+            2) steer the vehicle
         
     Sub Object: Instrument Cluster
         Name 4 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
-            4)
+            1) Speed Guage
+            2) Mileage Guage
+            3) Fuel Guage
+            4) Engine Temperature Guage
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) Display speed of the vehicle
+            2) Display the amount of remaining fuel
+            3) Display the temperature of the engine
     
     Sub Object: Environment Controls
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) AC Fan Speed Control
+            2) Seat Heating Control
+            3) AC/Heating Temperature Control
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) Adjust the AC Fan Speed
+            2) Adjust the Seat Heating Temperature
+            3) Adjust the AC/Heating Temperature
 
     Sub Object: Infotainment System
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) Volume Control
+            2) Audio Input Selector
+            3) EQ
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) Adjust the volume of the loudspeakers
+            2) Select between audio input sources
+            3) Adjust the frequencies of the audio
 
     Sub Object: Seat 
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) Backrest Adjustment
+            2) Headrest Adjustment
+            3) Seat Height Adjustment
         Name 2 actions that the [Sub Object] can do:
-            1)
-            2)
+            1) Adjust the angle of the Backrest
+            2) Adjust the height of the Headrest
 */
 
 /*
