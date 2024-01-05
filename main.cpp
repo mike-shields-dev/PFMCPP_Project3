@@ -471,7 +471,14 @@ Thing 1) Drone
         1) take off
         2) fly
         3) land
+*/
 
+struct Drone
+{
+
+};
+
+/*
 Thing 2) Bicycle
     5 properties:
         1) number of gears (int)
@@ -483,7 +490,14 @@ Thing 2) Bicycle
         1) roll
         2) stop
         3) change gears
+*/
 
+struct Bicycle
+{
+
+};
+
+/*
 Thing 3) Computer
     5 properties:
         1) number of processors (int)
@@ -495,7 +509,14 @@ Thing 3) Computer
         1) open files
         2) save files
         3) edit files
+*/
 
+struct Computer
+{
+
+};
+
+/*
 Thing 4) Midi Keyboard
     5 properties:
         1) number of keys (int)
@@ -507,7 +528,14 @@ Thing 4) Midi Keyboard
         1) Send Midi Note Messages
         2) Send Midi Control Change Messages
         3) Send Midi Pitch Bend Messages
+*/
 
+struct MidiKeyboard
+{
+
+};
+
+/*
 Thing 5) Oscillator
     5 properties:
         1) Frequency (hz) (double)
@@ -519,7 +547,14 @@ Thing 5) Oscillator
         1) Set the signal Waveform type
         2) Set the number of Unison Voices
         3) Set the output Frequency
+*/
 
+struct Oscillator
+{
+
+};
+
+/*
 Thing 6) Filter
     5 properties:
         1) Frequency/Cutoff (hz) (double)
@@ -531,7 +566,14 @@ Thing 6) Filter
         1) Set the Filter Type
         2) Set Resonance amount
         3) Set Filter Cutoff frequency
+*/
 
+struct Filter
+{
+
+};
+
+/*
 Thing 7) Amp Envelope
     5 properties:
         1) Attack Time (ms) (float)
@@ -543,7 +585,14 @@ Thing 7) Amp Envelope
         1) Set the Attack Time
         2) Set the Sustain Level
         3) Set the Release Time
-    
+*/
+
+struct AmpEnvelope
+{
+
+};
+
+/*
 Thing 8) Filter Envelope
     5 properties:
         1) Attack Time (ms) (float)
@@ -555,7 +604,14 @@ Thing 8) Filter Envelope
         1) Change the Attack Time
         2) Change the Decay Time
         3) Change the Hold Time
+*/
 
+struct FilterEnvelope
+{
+
+};
+
+/*
 Thing 9) LFO
     5 properties:
         1) Waveform (std:string) // or Enum?
@@ -567,7 +623,14 @@ Thing 9) LFO
         1) Output a modulation signal
         2) Output various waveform types
         3) Change the output signal frequency
+*/
 
+struct LFO
+{
+
+};
+
+/*
 Thing 10) Synthesizer
     5 properties:
         1) Oscillator (Oscillator)
@@ -580,6 +643,11 @@ Thing 10) Synthesizer
         2) Alter the frequency content of sounds
         3) Alter the amplitude envelope of sounds
 */
+
+struct Synthesizer
+{
+
+};
 
 /*
 =================
