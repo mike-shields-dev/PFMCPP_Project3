@@ -475,16 +475,26 @@ Thing 1) Drone
 
 struct Drone
 {
+    
     int propellorCount = 4;
-    float receiverFreqMhz = 1.2f;
+    
+    float receiverFreqMhz = 433.0f;
+    
     int batteryLifePercent = 100;
+    
     int receiverRangeMeters = 200;
+    
     int cameraCount = 2;
 
-    // 3 things it can do:
-    //     1) take off
-    //     2) fly
-    //     3) land
+    
+
+    void takeOff();
+    
+
+    void fly(double throttle, double pitch, double yaw, double roll);
+    
+
+    void land();
 };
 
 /*
@@ -503,17 +513,26 @@ Thing 2) Bicycle
 
 struct Bicycle
 {
-    // 5 properties:
+    
     int gearCount = 21;
+    
     int wheelSizeInches = 26;
+    
     std::string color = "red";
+    
     std::string brakeType = "hydraulic disc";
+    
     int lightCount = 2;
 
-    // 3 things it can do:
-    //     1) roll
-    //     2) stop
-    //     3) change gears
+    
+
+    void roll();
+    
+
+    void stop();
+    
+
+    void changeGear(int newGear);
 };
 
 /*
@@ -532,17 +551,26 @@ Thing 3) Computer
 
 struct Computer
 {
-    // 5 properties:
+    
     int processorCount = 4;
+    
     int ramCapacityGB = 16; 
+    
     int hardDriveCapacityGB = 2000;
+    
     std::string OperatingSystem = "Ubuntu 22.O4";
+    
+    int usbPortCount = 4;
 
-    //     5) number of USB ports (int)
-    // 3 things it can do:
-    //     1) open files
-    //     2) save files
-    //     3) edit files
+    
+
+    void openFile(std::string filepath);
+    
+
+    void saveFile(std::string filePath);
+    
+
+    void editFile(std::string filePath);
 };
 
 /*
@@ -561,17 +589,26 @@ Thing 4) Midi Keyboard
 
 struct MidiKeyboard
 {
-    // 5 properties:
+    
     int keyCount = 25;
+    
     int padCount = 8;
+    
     int knobCount = 8;
+    
     std::string make = "Akai";
+    
     std::string model = "MPK Mini";
 
-    // 3 things it can do:
-    //     1) Send Midi Note Messages
-    //     2) Send Midi Control Change Messages
-    //     3) Send Midi Pitch Bend Messages
+    
+
+    void emitMidiNote(int noteNumber, int velocity, bool isNoteOn, int midiChannel);
+    
+
+    void emitMidiControlChange(int ccNumber, int ccValue, int midiChannel);
+    
+
+    void emitPithBend(int midiChannel, int pitchBendValue);
 };
 
 /*
@@ -590,17 +627,26 @@ Thing 5) Oscillator
 
 struct Oscillator
 {
-    // 5 properties:
-    double frequencyHz = 440.0;
+    
+    double freqHz = 440.0;
+    
     std::string waveform = "sawtooth";
+    
     int phaseDeg = 0;
-    int unisonVoices = 4;
+    
+    int unisonVoiceCount = 4;
+    
     int fineTuning = 0;
 
-    // 3 things it can do:
-    //     1) Set the signal Waveform type
-    //     2) Set the number of Unison Voices
-    //     3) Set the output Frequency
+    
+
+    void setWaveform(std::string waveformType);
+    
+
+    void setunisonVoiceCount(int voiceCount);
+    
+
+    void setFreq(double freqHz);
 };
 
 /*
@@ -619,17 +665,26 @@ Thing 6) Filter
 
 struct Filter
 {
-    // 5 properties:
-    double freqHz = 200.0;
+    
+    double cutoffFreqHz= 200.0;
+    
     std::string type = "lowpass";
+    
     double resonanceDb = 0.5;
+    
     int slopeDbPerOct = 12;
+    
     int mixPercent = 100;
 
-    // 3 things it can do:
-    //     1) Set the Filter Type
-    //     2) Set Resonance amount
-    //     3) Set Filter Cutoff frequency
+    
+
+    void setType(std::string filterType);
+    
+
+    void setResonance(double resDb);
+    
+
+    void setCutoffFreq(double freqHz);
 };
 
 /*
@@ -648,17 +703,26 @@ Thing 7) Amp Envelope
 
 struct AmpEnvelope
 {
-    // 5 properties:
+    
     float attackTimeMs = 20.0f;
+    
     float holdTimeMs = 100.0f;
+    
     float decayTimeMs = 100.0f;
+    
     float sustainLevel = 0.5f;
+    
     float releaseTimeMs = 100.0f;
 
-    // 3 things it can do:
-    //     1) Set the Attack Time
-    //     2) Set the Sustain Level
-    //     3) Set the Release Time
+    
+
+    void setAttackTime(float millis);
+    
+
+    void setSustainLevel(float level);
+    
+
+    void setReleaseTime(float millis);
 };
 
 /*
@@ -677,17 +741,26 @@ Thing 8) Filter Envelope
 
 struct FilterEnvelope
 {
-    // 5 properties:
+    
     float attackTimeMs = 20.0f;
+    
     float holdTimeMs = 100.0f;
+    
     float decayTimeMs = 100.0f;
+    
     float sustainLevel = 0.5f;
+    
     float releaseTimeMs = 100.0f;
     
-    // 3 things it can do:
-    //     1) Change the Attack Time
-    //     2) Change the Decay Time
-    //     3) Change the Hold Time
+    
+
+    void setAttackTime(float millis);
+    
+
+    void setDecayTime(float millis);
+    
+
+    void setHoldTime(float millis);
 };
 
 /*
@@ -706,17 +779,23 @@ Thing 9) LFO
 
 struct LFO
 {
-    // 5 properties:
     std::string waveform = "triangle";
+    
     int phaseDeg = 0;
+    
     bool repeat = false;
+    
     float freqHz = 1.0f;
+    
     float delayMs = 0.0f;
 
-    // 3 things it can do:
-    //     1) Output a modulation signal
-    //     2) Output various waveform types
-    //     3) Change the output signal frequency
+    void emitSignal();
+    
+
+    void setWaveform(std::string waveformType);
+    
+
+    void setFreq(float freqHz);
 };
 
 /*
@@ -735,17 +814,25 @@ Thing 10) Synthesizer
 
 struct Synthesizer
 {
-    // 5 properties:
+    
     Oscillator osc;
+    
     Filter filter;
+    
     FilterEnvelope filterEnv;
+    
     AmpEnvelope ampEnv;
+    
     LFO lfo;
 
-    // 3 things it can do:
-    //     1) Generate sounds
-    //     2) Alter the frequency content of sounds
-    //     3) Alter the amplitude envelope of sounds
+    void generateSound();
+    
+
+    void setFilterParams(double cutoffFreqHz, double resDb, int slopeDbPerOct);
+    
+
+    void setAmpEnvParams(float attackTimeMs, float holdTimeMs, float decayTimeMs, float sustainLevel, float releaseTimeMs);
+
 };
 
 /*
