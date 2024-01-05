@@ -196,53 +196,53 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
+Thing 1) Drone
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of propellors
+    2) reciever frequency
+    3) battery life
+    4) reciever range
+    5) number of cameras
 3 things it can do:
-    1)
-    2)
-    3)
+    1) take off
+    2) fly
+    3) land
 
-Thing 2)
+Thing 2) Bicycle
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of gears
+    2) wheel size
+    3) color
+    4) brake type
+    5) number of lights
 3 things it can do:
-    1)
-    2)
-    3)
+    1) roll
+    2) stop
+    3) change gears
 
-Thing 3)
+Thing 3) Computer
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of processors
+    2) RAM Capacity
+    3) Hard Drive Capacity
+    4) Operating System
+    5) number of USB ports
 3 things it can do:
-    1)
-    2)
-    3)
+    1) open files
+    2) save files
+    3) edit files
 
-Thing 4)
+Thing 4) Midi Keyboard
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of keys
+    2) number of pads
+    3) number of knobs
+    4) make
+    5).model
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Send Midi Note Messages
+    2) Send Midi Control Change Messages
+    3) Send Midi Pitch Bend Messages
 */
 
 /*
