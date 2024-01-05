@@ -462,65 +462,65 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
+Thing 5) Oscillator
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Frequency (hz) (double)
+    2) Waveform (std:string) // Enum might be better?
+    3) Phase (degrees)(int)
+    4) Unison (voice count) (int)
+    5) Tuning (cents) (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Set the signal Waveform type
+    2) Set the number of Unison Voices
+    3) Set the output Frequency
 
-Thing 6)
+Thing 6) Filter
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Frequency/Cutoff (hz) (double)
+    2).Type (std::string)
+    3) Resonance (dB)(double)
+    4) Slope (dB/oct)(int)
+    5) Mix (Percent)(int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Set the Filter Type
+    2) Set Resonance amount
+    3) Set Filter Cutoff frequency
 
-Thing 7)
+Thing 7) Amp Envelope
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Attack Time (ms) (float)
+    2) Hold Time (ms) (float)
+    3) Decay Time (ms) (float)
+    4) Sustain Level (float)
+    5) Release Time (ms) (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Set the Attack Time
+    2) Set the Sustain Level
+    3) Set the Release Time
 
-Thing 8)
+Thing 8) Filter Envelope
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Attack Time (ms) (float)
+    2) Hold Time (ms) (float)
+    3) Decay Time (ms) (float)
+    4) Sustain Level (float)
+    5) Release Time (ms) (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Change the Attack Time
+    2) Change the Decay Time
+    3) Change the Hold Time
 
-Thing 9)
+Thing 9) LFO
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Frequency (hz) (float)
+    2) Waveform (std:string) // Enum?
+    3) Phase (degrees)(double)
+    4) Repeat (bool)
+    5) Delay (ms) (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Output a modulation signal
+    2) Output various waveform types
+    3) Change the output signal frequency
  */
 
 /*
