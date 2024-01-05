@@ -318,6 +318,34 @@ example:
         Brightness (double)
         area in cm2 (int)
         brand (std::string)
+
+    Drone
+        number of propellors (int)
+        reciever frequency (Megahertz) (float)
+        battery life (percent) (int)
+        reciever range (meters) (int)
+        number of cameras (int)
+
+    Bicycle
+        number of gears (int)
+        wheel size (inches) (int)
+        color (std::string)
+        brake type (std::string)
+        number of lights (int)
+
+    Computer
+        number of processors (int)
+        RAM Capacity (GB) (int)
+        Hard Drive Capacity (GB) (int)
+        Operating System (std::string)
+        number of USB ports (int)
+
+    Midi Keyboard
+        number of keys (int)
+        number of pads (int)
+        number of knobs (int)
+        make (std::string)
+        model (std::string)
 */
 
 /*
