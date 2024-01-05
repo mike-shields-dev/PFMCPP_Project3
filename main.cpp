@@ -475,7 +475,16 @@ Thing 1) Drone
 
 struct Drone
 {
-
+    // 5 properties:
+    //     1) number of propellors (int)
+    //     2) reciever frequency (Megahertz) (float)
+    //     3) battery life (percent) (int)
+    //     4) reciever range (meters) (int)
+    //     5) number of cameras (int)
+    // 3 things it can do:
+    //     1) take off
+    //     2) fly
+    //     3) land
 };
 
 /*
@@ -494,7 +503,16 @@ Thing 2) Bicycle
 
 struct Bicycle
 {
-
+    // 5 properties:
+    //     1) number of gears (int)
+    //     2) wheel size (inches) (int)
+    //     3) color (std::string)
+    //     4) brake type (std::string)
+    //     5) number of lights (int)
+    // 3 things it can do:
+    //     1) roll
+    //     2) stop
+    //     3) change gears
 };
 
 /*
@@ -513,7 +531,16 @@ Thing 3) Computer
 
 struct Computer
 {
-
+    // 5 properties:
+    //     1) number of processors (int)
+    //     2) RAM Capacity (GB) (int)
+    //     3) Hard Drive Capacity (GB) (int)
+    //     4) Operating System (std::string)
+    //     5) number of USB ports (int)
+    // 3 things it can do:
+    //     1) open files
+    //     2) save files
+    //     3) edit files
 };
 
 /*
@@ -532,7 +559,16 @@ Thing 4) Midi Keyboard
 
 struct MidiKeyboard
 {
-
+    // 5 properties:
+    //     1) number of keys (int)
+    //     2) number of pads (int)
+    //     3) number of knobs (int)
+    //     4) make (std::string)
+    //     5) model (std::string)
+    // 3 things it can do:
+    //     1) Send Midi Note Messages
+    //     2) Send Midi Control Change Messages
+    //     3) Send Midi Pitch Bend Messages
 };
 
 /*
@@ -551,7 +587,16 @@ Thing 5) Oscillator
 
 struct Oscillator
 {
-
+    // 5 properties:
+    //     1) Frequency (hz) (double)
+    //     2) Waveform (std:string) //  or Enum?
+    //     3) Phase (degrees)(int)
+    //     4) Unison (voice count) (int)
+    //     5) Tuning (cents) (int)
+    // 3 things it can do:
+    //     1) Set the signal Waveform type
+    //     2) Set the number of Unison Voices
+    //     3) Set the output Frequency
 };
 
 /*
@@ -570,7 +615,16 @@ Thing 6) Filter
 
 struct Filter
 {
-
+    // 5 properties:
+    //     1) Frequency/Cutoff (hz) (double)
+    //     2) Type (std::string) // or Enum?
+    //     3) Resonance (dB)(double)
+    //     4) Slope (dB/oct)(int)
+    //     5) Mix (Percent)(int)
+    // 3 things it can do:
+    //     1) Set the Filter Type
+    //     2) Set Resonance amount
+    //     3) Set Filter Cutoff frequency
 };
 
 /*
@@ -589,7 +643,16 @@ Thing 7) Amp Envelope
 
 struct AmpEnvelope
 {
-
+    // 5 properties:
+    //     1) Attack Time (ms) (float)
+    //     2) Hold Time (ms) (float)
+    //     3) Decay Time (ms) (float)
+    //     4) Sustain Level (float)
+    //     5) Release Time (ms) (float)
+    // 3 things it can do:
+    //     1) Set the Attack Time
+    //     2) Set the Sustain Level
+    //     3) Set the Release Time
 };
 
 /*
@@ -608,7 +671,16 @@ Thing 8) Filter Envelope
 
 struct FilterEnvelope
 {
-
+    // 5 properties:
+    //     1) Attack Time (ms) (float)
+    //     2) Hold Time (ms) (float)
+    //     3) Decay Time (ms) (float)
+    //     4) Sustain Level (float)
+    //     5) Release Time (ms) (float)
+    // 3 things it can do:
+    //     1) Change the Attack Time
+    //     2) Change the Decay Time
+    //     3) Change the Hold Time
 };
 
 /*
@@ -627,7 +699,16 @@ Thing 9) LFO
 
 struct LFO
 {
-
+    // 5 properties:
+    //     1) Waveform (std:string) // or Enum?
+    //     2) Phase (degrees)(int)
+    //     3) Repeat (bool)
+    //     4) Frequency (hz) (float)
+    //     5) Delay (ms) (float)
+    // 3 things it can do:
+    //     1) Output a modulation signal
+    //     2) Output various waveform types
+    //     3) Change the output signal frequency
 };
 
 /*
@@ -646,7 +727,16 @@ Thing 10) Synthesizer
 
 struct Synthesizer
 {
-
+    // 5 properties:
+    //     1) Oscillator (Oscillator)
+    //     2) Filter (Filter)
+    //     3) Filter Envelope (Filter Envelope)
+    //     4) Amp Envelope (Amp Envelope)
+    //     5) LFO (LFO)
+    // 3 things it can do:
+    //     1) Generate sounds
+    //     2) Alter the frequency content of sounds
+    //     3) Alter the amplitude envelope of sounds
 };
 
 /*
