@@ -196,53 +196,7 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1) Drone
-5 properties:
-    1) number of propellors
-    2) reciever frequency
-    3) battery life
-    4) reciever range
-    5) number of cameras
-3 things it can do:
-    1) take off
-    2) fly
-    3) land
 
-Thing 2) Bicycle
-5 properties:
-    1) number of gears
-    2) wheel size
-    3) color
-    4) brake type
-    5) number of lights
-3 things it can do:
-    1) roll
-    2) stop
-    3) change gears
-
-Thing 3) Computer
-5 properties:
-    1) number of processors
-    2) RAM Capacity
-    3) Hard Drive Capacity
-    4) Operating System
-    5) number of USB ports
-3 things it can do:
-    1) open files
-    2) save files
-    3) edit files
-
-Thing 4) Midi Keyboard
-5 properties:
-    1) number of keys
-    2) number of pads
-    3) number of knobs
-    4) make
-    5).model
-3 things it can do:
-    1) Send Midi Note Messages
-    2) Send Midi Control Change Messages
-    3) Send Midi Pitch Bend Messages
 */
 
 /*
@@ -365,17 +319,6 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 
-Thing 10) Synthesizer
-5 properties:
-    1) Oscillator
-    2) Filter
-    3) Filter Envelope
-    4) Amp Envelope
-    5) LFO
-3 things it can do:
-    1) Generate sounds
-    2) Alter the frequency content of sounds
-    3) Alter the amplitude envelope of sounds
  */
 
  /*
@@ -462,65 +405,7 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5) Oscillator
-5 properties:
-    1) Frequency
-    2) Waveform
-    3) Phase
-    4) Unison
-    5) Tuning
-3 things it can do:
-    1) Set the signal Waveform type
-    2) Set the number of Unison Voices
-    3) Set the output Frequency
 
-Thing 6) Filter
-5 properties:
-    1) Frequency/Cutoff
-    2).Type
-    3) Resonance
-    4) Slope
-    5) Mix
-3 things it can do:
-    1) Set the Filter Type
-    2) Set Resonance amount
-    3) Set Filter Cutoff frequency
-
-Thing 7) Amp Envelope
-5 properties:
-    1) Attack Time
-    2) Hold Time
-    3) Decay Time
-    4) Sustain Level
-    5) Release Time
-3 things it can do:
-    1) Set the Attack Time
-    2) Set the Sustain Level
-    3) Set the Release Time
-
-Thing 8) Filter Envelope
-5 properties:
-    1) Attack Time
-    2) Hold Time
-    3) Decay Time
-    4) Sustain Level
-    5) Release Time
-3 things it can do:
-    1) Change the Attack Time
-    2) Change the Decay Time
-    3) Change the Hold Time
-
-Thing 9) LFO
-5 properties:
-    1) Frequency
-    2) Waveform
-    3) Phase
-    4) Repeat
-    5) Delay
-3 things it can do:
-    1) Output a modulation signal
-    2) Output various waveform types
-    3) Change the output signal frequency
  */
 
 /*
@@ -547,40 +432,6 @@ example:
         width in cm (int)
         height in cm (int)
 
-    Oscillator
-        Frequency (hz) (double)
-        Waveform (std:string) // Enum might be better?
-        Phase (degrees)(int)
-        Unison (voice count) (int)
-        Tuning (cents) (int)
-
-    Filter
-        Frequency/Cutoff (hz) (double)
-        Type (std::string) // Enum?
-        Resonance (dB)(double)
-        Slope (dB/oct)(int)
-        Mix (Percent)(int)
-
-    Amp Envelope
-        Attack Time (ms) (float)
-        Hold Time (ms) (float)
-        Decay Time (ms) (float)
-        Sustain Level (float)
-        Release Time (ms) (float)
-
-    Filter Envelope
-        Attack Time (ms) (float)
-        Hold Time (ms) (float)
-        Decay Time (ms) (float)
-        Sustain Level (float)
-        Release Time (ms) (float)
-
-    LFO
-        Frequency (hz) (float)
-        Waveform (std:string) // Enum?
-        Phase (degrees)(double)
-        Repeat (bool)
-        Delay (ms) (float)
 */
 
 /*
@@ -608,12 +459,127 @@ MOVE THEM to the space below this block comment and put them in numerical order
     simply CUT and PASTE them in the space provided below:
 */
 
+/*
+Thing 1) Drone
+    5 properties:
+        1) number of propellors (int)
+        2) reciever frequency (Megahertz) (float)
+        3) battery life (percent) (int)
+        4) reciever range (meters) (int)
+        5) number of cameras (int)
+    3 things it can do:
+        1) take off
+        2) fly
+        3) land
 
+Thing 2) Bicycle
+    5 properties:
+        1) number of gears (int)
+        2) wheel size (inches) (int)
+        3) color (std::string)
+        4) brake type (std::string)
+        5) number of lights (int)
+    3 things it can do:
+        1) roll
+        2) stop
+        3) change gears
 
+Thing 3) Computer
+    5 properties:
+        1) number of processors (int)
+        2) RAM Capacity (GB) (int)
+        3) Hard Drive Capacity (GB) (int)
+        4) Operating System (std::string)
+        5) number of USB ports (int)
+    3 things it can do:
+        1) open files
+        2) save files
+        3) edit files
 
+Thing 4) Midi Keyboard
+    5 properties:
+        1) number of keys (int)
+        2) number of pads (int)
+        3) number of knobs (int)
+        4) make (std::string)
+        5) model (std::string)
+    3 things it can do:
+        1) Send Midi Note Messages
+        2) Send Midi Control Change Messages
+        3) Send Midi Pitch Bend Messages
 
+Thing 5) Oscillator
+    5 properties:
+        1) Frequency (hz) (double)
+        2) Waveform (std:string) //  or Enum?
+        3) Phase (degrees)(int)
+        4) Unison (voice count) (int)
+        5) Tuning (cents) (int)
+    3 things it can do:
+        1) Set the signal Waveform type
+        2) Set the number of Unison Voices
+        3) Set the output Frequency
 
+Thing 6) Filter
+    5 properties:
+        1) Frequency/Cutoff (hz) (double)
+        2) Type (std::string) // or Enum?
+        3) Resonance (dB)(double)
+        4) Slope (dB/oct)(int)
+        5) Mix (Percent)(int)
+    3 things it can do:
+        1) Set the Filter Type
+        2) Set Resonance amount
+        3) Set Filter Cutoff frequency
 
+Thing 7) Amp Envelope
+    5 properties:
+        1) Attack Time (ms) (float)
+        2) Hold Time (ms) (float)
+        3) Decay Time (ms) (float)
+        4) Sustain Level (float)
+        5) Release Time (ms) (float)
+    3 things it can do:
+        1) Set the Attack Time
+        2) Set the Sustain Level
+        3) Set the Release Time
+    
+Thing 8) Filter Envelope
+    5 properties:
+        1) Attack Time (ms) (float)
+        2) Hold Time (ms) (float)
+        3) Decay Time (ms) (float)
+        4) Sustain Level (float)
+        5) Release Time (ms) (float)
+    3 things it can do:
+        1) Change the Attack Time
+        2) Change the Decay Time
+        3) Change the Hold Time
+
+Thing 9) LFO
+    5 properties:
+        1) Waveform (std:string) // or Enum?
+        2) Phase (degrees)(int)
+        3) Repeat (bool)
+        4) Frequency (hz) (float)
+        5) Delay (ms) (float)
+    3 things it can do:
+        1) Output a modulation signal
+        2) Output various waveform types
+        3) Change the output signal frequency
+
+Thing 10) Synthesizer
+    5 properties:
+        1) Oscillator (Oscillator)
+        2) Filter (Filter)
+        3) Filter Envelope (Filter Envelope)
+        4) Amp Envelope (Amp Envelope)
+        5) LFO (LFO)
+    3 things it can do:
+        1) Generate sounds
+        2) Alter the frequency content of sounds
+        3) Alter the amplitude envelope of sounds
+*/
 
 /*
 =================
