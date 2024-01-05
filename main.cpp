@@ -476,11 +476,11 @@ Thing 5) Oscillator
 
 Thing 6) Filter
 5 properties:
-    1) Frequency/Cutoff (hz) (double)
-    2).Type (std::string)
-    3) Resonance (dB)(double)
-    4) Slope (dB/oct)(int)
-    5) Mix (Percent)(int)
+    1) Frequency/Cutoff
+    2).Type
+    3) Resonance
+    4) Slope
+    5) Mix
 3 things it can do:
     1) Set the Filter Type
     2) Set Resonance amount
@@ -488,11 +488,11 @@ Thing 6) Filter
 
 Thing 7) Amp Envelope
 5 properties:
-    1) Attack Time (ms) (float)
-    2) Hold Time (ms) (float)
-    3) Decay Time (ms) (float)
-    4) Sustain Level (float)
-    5) Release Time (ms) (float)
+    1) Attack Time
+    2) Hold Time
+    3) Decay Time
+    4) Sustain Level
+    5) Release Time
 3 things it can do:
     1) Set the Attack Time
     2) Set the Sustain Level
@@ -500,11 +500,11 @@ Thing 7) Amp Envelope
 
 Thing 8) Filter Envelope
 5 properties:
-    1) Attack Time (ms) (float)
-    2) Hold Time (ms) (float)
-    3) Decay Time (ms) (float)
-    4) Sustain Level (float)
-    5) Release Time (ms) (float)
+    1) Attack Time
+    2) Hold Time
+    3) Decay Time
+    4) Sustain Level
+    5) Release Time
 3 things it can do:
     1) Change the Attack Time
     2) Change the Decay Time
@@ -512,11 +512,11 @@ Thing 8) Filter Envelope
 
 Thing 9) LFO
 5 properties:
-    1) Frequency (hz) (float)
-    2) Waveform (std:string) // Enum?
-    3) Phase (degrees)(double)
-    4) Repeat (bool)
-    5) Delay (ms) (float)
+    1) Frequency
+    2) Waveform
+    3) Phase
+    4) Repeat
+    5) Delay
 3 things it can do:
     1) Output a modulation signal
     2) Output various waveform types
@@ -546,6 +546,41 @@ example:
         Brightness (double)
         width in cm (int)
         height in cm (int)
+
+    Oscillator
+        Frequency (hz) (double)
+        Waveform (std:string) // Enum might be better?
+        Phase (degrees)(int)
+        Unison (voice count) (int)
+        Tuning (cents) (int)
+
+    Filter
+        Frequency/Cutoff (hz) (double)
+        Type (std::string)
+        Resonance (dB)(double)
+        Slope (dB/oct)(int)
+        Mix (Percent)(int)
+
+    Amp Envelope
+        Attack Time (ms) (float)
+        Hold Time (ms) (float)
+        Decay Time (ms) (float)
+        Sustain Level (float)
+        Release Time (ms) (float)
+
+    Filter Envelope
+        Attack Time (ms) (float)
+        Hold Time (ms) (float)
+        Decay Time (ms) (float)
+        Sustain Level (float)
+        Release Time (ms) (float)
+
+    LFO
+        Frequency (hz) (float)
+        Waveform (std:string) // Enum?
+        Phase (degrees)(double)
+        Repeat (bool)
+        Delay (ms) (float)
 */
 
 /*
