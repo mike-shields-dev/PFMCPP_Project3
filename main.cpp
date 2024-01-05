@@ -464,11 +464,11 @@ example:
 
 Thing 5) Oscillator
 5 properties:
-    1) Frequency (hz) (double)
-    2) Waveform (std:string) // Enum might be better?
-    3) Phase (degrees)(int)
-    4) Unison (voice count) (int)
-    5) Tuning (cents) (int)
+    1) Frequency
+    2) Waveform
+    3) Phase
+    4) Unison
+    5) Tuning
 3 things it can do:
     1) Set the signal Waveform type
     2) Set the number of Unison Voices
@@ -556,7 +556,7 @@ example:
 
     Filter
         Frequency/Cutoff (hz) (double)
-        Type (std::string)
+        Type (std::string) // Enum?
         Resonance (dB)(double)
         Slope (dB/oct)(int)
         Mix (Percent)(int)
