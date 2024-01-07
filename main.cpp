@@ -475,26 +475,32 @@ Thing 1) Drone
 
 struct Drone
 {
-    
     int propellorCount = 4;
-    
     float receiverFreqMhz = 433.0f;
-    
     int batteryLifePercent = 100;
-    
-    int receiverRangeMeters = 200;
-    
+    int receiverRangeMeters = 200; 
     int cameraCount = 2;
 
-    
+    struct MotorControlUnit
+    {
+        int motorCount = 4;
+        float operatingVoltage = 24.0f;
+        double powerOutputWatts = 225;
+        std::string manufacturer = "Yamasuki";
+        std::string model = "YM-C4";
 
-    void takeOff();
-    
+        void setMotorRpm(float newRpm);
 
-    void fly(double throttle, double pitch, double yaw, double roll);
-    
+        float getMotorRpm(int motorIndex);
 
-    void land();
+        float getMaxMotorTempC();
+    };
+
+    void takeOff(MotorControlUnit motorControlUnit, bool aiAssisted = true);
+
+    void fly(MotorControlUnit motorControlUnit, bool aiAssisted = false);
+
+    void land(MotorControlUnit motorControlUnit, bool aiAssisted = true, bool atHome = true);
 };
 
 /*
@@ -513,26 +519,17 @@ Thing 2) Bicycle
 
 struct Bicycle
 {
-    
     int gearCount = 21;
-    
     int wheelSizeInches = 26;
-    
     std::string color = "red";
-    
     std::string brakeType = "hydraulic disc";
-    
     int lightCount = 2;
 
-    
-
     void roll();
-    
 
     void stop();
-    
 
-    void changeGear(int newGear);
+    void changeGear(int gearNumber);
 };
 
 /*
@@ -551,24 +548,30 @@ Thing 3) Computer
 
 struct Computer
 {
-    
     int processorCount = 4;
-    
     int ramCapacityGB = 16; 
-    
     int hardDriveCapacityGB = 2000;
-    
     std::string OperatingSystem = "Ubuntu 22.O4";
-    
     int usbPortCount = 4;
 
-    
+    struct AudioInterface
+    {
+        int inputCount = 4;
+        int outputCount = 2;
+        int sampleRateHz = 48000;
+        bool isPhantomPowerOn = false;
+        std::string manufacturer = "Behringer";
+
+        void setGain(int newVolume, std::string channelId = "master");
+
+        void setMute(bool isMuted, std::string channelId = "master");
+
+        void setPan(int pan, std::string channelId = "master");
+    };
 
     void openFile(std::string filepath);
-    
 
     void saveFile(std::string filePath);
-    
 
     void editFile(std::string filePath);
 };
@@ -589,24 +592,15 @@ Thing 4) Midi Keyboard
 
 struct MidiKeyboard
 {
-    
     int keyCount = 25;
-    
     int padCount = 8;
-    
     int knobCount = 8;
-    
     std::string make = "Akai";
-    
     std::string model = "MPK Mini";
 
-    
-
     void emitMidiNote(int noteNumber, int velocity, bool isNoteOn, int midiChannel);
-    
 
     void emitMidiControlChange(int ccNumber, int ccValue, int midiChannel);
-    
 
     void emitPithBend(int midiChannel, int pitchBendValue);
 };
@@ -627,24 +621,15 @@ Thing 5) Oscillator
 
 struct Oscillator
 {
-    
     double freqHz = 440.0;
-    
     std::string waveform = "sawtooth";
-    
     int phaseDeg = 0;
-    
     int unisonVoiceCount = 4;
-    
     int fineTuning = 0;
 
-    
-
     void setWaveform(std::string waveformType);
-    
 
     void setunisonVoiceCount(int voiceCount);
-    
 
     void setFreq(double freqHz);
 };
@@ -665,24 +650,15 @@ Thing 6) Filter
 
 struct Filter
 {
-    
     double cutoffFreqHz= 200.0;
-    
     std::string type = "lowpass";
-    
     double resonanceDb = 0.5;
-    
     int slopeDbPerOct = 12;
-    
     int mixPercent = 100;
 
-    
-
     void setType(std::string filterType);
-    
 
     void setResonance(double resDb);
-    
 
     void setCutoffFreq(double freqHz);
 };
@@ -703,24 +679,15 @@ Thing 7) Amp Envelope
 
 struct AmpEnvelope
 {
-    
     float attackTimeMs = 20.0f;
-    
     float holdTimeMs = 100.0f;
-    
     float decayTimeMs = 100.0f;
-    
     float sustainLevel = 0.5f;
-    
     float releaseTimeMs = 100.0f;
 
-    
-
     void setAttackTime(float millis);
-    
 
     void setSustainLevel(float level);
-    
 
     void setReleaseTime(float millis);
 };
@@ -741,24 +708,15 @@ Thing 8) Filter Envelope
 
 struct FilterEnvelope
 {
-    
     float attackTimeMs = 20.0f;
-    
     float holdTimeMs = 100.0f;
-    
     float decayTimeMs = 100.0f;
-    
     float sustainLevel = 0.5f;
-    
     float releaseTimeMs = 100.0f;
-    
-    
 
     void setAttackTime(float millis);
-    
 
     void setDecayTime(float millis);
-    
 
     void setHoldTime(float millis);
 };
@@ -780,20 +738,14 @@ Thing 9) LFO
 struct LFO
 {
     std::string waveform = "triangle";
-    
     int phaseDeg = 0;
-    
     bool repeat = false;
-    
     float freqHz = 1.0f;
-    
     float delayMs = 0.0f;
 
     void emitSignal();
-    
 
     void setWaveform(std::string waveformType);
-    
 
     void setFreq(float freqHz);
 };
@@ -814,25 +766,17 @@ Thing 10) Synthesizer
 
 struct Synthesizer
 {
-    
     Oscillator osc;
-    
     Filter filter;
-    
     FilterEnvelope filterEnv;
-    
     AmpEnvelope ampEnv;
-    
     LFO lfo;
 
     void generateSound();
-    
 
     void setFilterParams(double cutoffFreqHz, double resDb, int slopeDbPerOct);
-    
 
     void setAmpEnvParams(float attackTimeMs, float holdTimeMs, float decayTimeMs, float sustainLevel, float releaseTimeMs);
-
 };
 
 /*
