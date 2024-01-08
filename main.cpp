@@ -481,13 +481,12 @@ struct Drone
     int receiverRangeMeters = 200; 
     int cameraCount = 2;
 
-    struct MotorControlUnit
+    struct Location
     {
-        int motorCount = 4;
-        float operatingVoltage = 24.0f;
-        double powerOutputWatts = 225;
-        std::string manufacturer = "Yamasuki";
-        std::string model = "YM-C4";
+        std::string locationName;
+        double longitude;
+        double latitude;
+        float altitude;
 
         void setMotorRpm(float newRpm);
 
@@ -496,11 +495,14 @@ struct Drone
         float getMaxMotorTempC();
     };
 
-    void takeOff(MotorControlUnit motorControlUnit, bool aiAssisted = true);
+    void takeOff(Location location, bool aiAssisted = true);
 
-    void fly(MotorControlUnit motorControlUnit, bool aiAssisted = false);
+    void fly(Location location, bool aiAssisted = false);
 
-    void land(MotorControlUnit motorControlUnit, bool aiAssisted = true, bool atHome = true);
+    void land(Location location, bool aiAssisted = true);
+
+    Location origin;
+    Location destination;
 };
 
 /*
@@ -543,7 +545,7 @@ Thing 3) Computer
     3 things it can do:
         1) open files
         2) save files
-        3) edit files
+        3) delete files
 */
 
 struct Computer
@@ -554,26 +556,28 @@ struct Computer
     std::string OperatingSystem = "Ubuntu 22.O4";
     int usbPortCount = 4;
 
-    struct AudioInterface
+    struct File
     {
-        int inputCount = 4;
-        int outputCount = 2;
-        int sampleRateHz = 48000;
-        bool isPhantomPowerOn = false;
-        std::string manufacturer = "Behringer";
+        int sizeMB;
+        std::string fileName;
+        std::string fileType;
+        bool isWritable = true;
+        bool isProtected = true;
 
-        void setGain(int newVolume, std::string channelId = "master");
+        void erase(bool verify = true);
 
-        void setMute(bool isMuted, std::string channelId = "master");
+        void copy(std::string destinationPath);
 
-        void setPan(int pan, std::string channelId = "master");
+        void move(std::string destinationPath);
     };
 
-    void openFile(std::string filepath);
+    void eraseFile(File file, bool verify = true);
 
-    void saveFile(std::string filePath);
+    void openFile(File file, std::string usingAppPath);
 
-    void editFile(std::string filePath);
+    void writeFile(File file, std::string destinationPath, bool verify = true);
+
+    File file;
 };
 
 /*
@@ -968,7 +972,7 @@ Be sure to make the commit message meaningful.
 */
 } //end namespace Part1E_Step7
 
-namespace Part1E_Step19
+namespace Part1E_Step9
 {
 /*
 =================
