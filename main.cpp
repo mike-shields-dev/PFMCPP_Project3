@@ -83,51 +83,51 @@ Main Object: Car Interior
         Name 4 nouns you'll find on the [Sub Object]
             1) paddle shifters
             2) 'cruise control' controls
-            3) 
-            4) 
+            3) horn
+            4) indicators
         Name 2 actions that the [Sub Object] can do:
             1) adjust cruise control settings.
-            2)
+            2) steer the vehicle
         
     Sub Object: Instrument Cluster
         Name 4 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
-            4)
+            1) Speed Guage
+            2) Mileage Guage
+            3) Fuel Guage
+            4) Engine Temperature Guage
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) Display speed of the vehicle
+            2) Display the amount of remaining fuel
+            3) Display the temperature of the engine
     
     Sub Object: Environment Controls
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) AC Fan Speed Control
+            2) Seat Heating Control
+            3) AC/Heating Temperature Control
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) Adjust the AC Fan Speed
+            2) Adjust the Seat Heating Temperature
+            3) Adjust the AC/Heating Temperature
 
     Sub Object: Infotainment System
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) Volume Control
+            2) Audio Input Selector
+            3) EQ
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) Adjust the volume of the loudspeakers
+            2) Select between audio input sources
+            3) Adjust the frequencies of the audio
 
     Sub Object: Seat 
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) Backrest Adjustment
+            2) Headrest Adjustment
+            3) Seat Height Adjustment
         Name 2 actions that the [Sub Object] can do:
-            1)
-            2)
+            1) Adjust the angle of the Backrest
+            2) Adjust the height of the Headrest
 */
 
 /*
@@ -196,53 +196,7 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
 
-Thing 2)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 3)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 4)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
 */
 
 /*
@@ -318,6 +272,34 @@ example:
         Brightness (double)
         area in cm2 (int)
         brand (std::string)
+
+    Drone
+        number of propellors (int)
+        reciever frequency (Megahertz) (float)
+        battery life (percent) (int)
+        reciever range (meters) (int)
+        number of cameras (int)
+
+    Bicycle
+        number of gears (int)
+        wheel size (inches) (int)
+        color (std::string)
+        brake type (std::string)
+        number of lights (int)
+
+    Computer
+        number of processors (int)
+        RAM Capacity (GB) (int)
+        Hard Drive Capacity (GB) (int)
+        Operating System (std::string)
+        number of USB ports (int)
+
+    Midi Keyboard
+        number of keys (int)
+        number of pads (int)
+        number of knobs (int)
+        make (std::string)
+        model (std::string)
 */
 
 /*
@@ -337,17 +319,6 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 
-Thing 10)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
  */
 
  /*
@@ -434,65 +405,7 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
 
-Thing 6)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 7)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 8)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 9)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
  */
 
 /*
@@ -518,6 +431,7 @@ example:
         Brightness (double)
         width in cm (int)
         height in cm (int)
+
 */
 
 /*
@@ -545,12 +459,329 @@ MOVE THEM to the space below this block comment and put them in numerical order
     simply CUT and PASTE them in the space provided below:
 */
 
+/*
+Thing 1) Drone
+    5 properties:
+        1) number of propellors (int)
+        2) reciever frequency (Megahertz) (float)
+        3) battery life (percent) (int)
+        4) reciever range (meters) (int)
+        5) number of cameras (int)
+    3 things it can do:
+        1) take off
+        2) fly
+        3) land
+*/
 
+struct Drone
+{
+    int propellorCount = 4;
+    float receiverFreqMhz = 433.0f;
+    int batteryLifePercent = 100;
+    int receiverRangeMeters = 200; 
+    int cameraCount = 2;
 
+    struct Location
+    {
+        std::string locationName;
+        double longitude;
+        double latitude;
+        float altitude;
 
+        void setMotorRpm(float newRpm);
 
+        float getMotorRpm(int motorIndex);
 
+        float getMaxMotorTempC();
+    };
 
+    void takeOff(Location location, bool aiAssisted = true);
+
+    void fly(Location location, bool aiAssisted = false);
+
+    void land(Location location, bool aiAssisted = true);
+
+    Location origin;
+    Location destination;
+};
+
+/*
+Thing 2) Bicycle
+    5 properties:
+        1) number of gears (int)
+        2) wheel size (inches) (int)
+        3) color (std::string)
+        4) brake type (std::string)
+        5) number of lights (int)
+    3 things it can do:
+        1) roll
+        2) stop
+        3) change gears
+*/
+
+struct Bicycle
+{
+    int gearCount = 21;
+    int wheelSizeInches = 26;
+    std::string color = "red";
+    std::string brakeType = "hydraulic disc";
+    int lightCount = 2;
+
+    void roll();
+
+    void stop();
+
+    void changeGear(int gearNumber);
+};
+
+/*
+Thing 3) Computer
+    5 properties:
+        1) number of processors (int)
+        2) RAM Capacity (GB) (int)
+        3) Hard Drive Capacity (GB) (int)
+        4) Operating System (std::string)
+        5) number of USB ports (int)
+    3 things it can do:
+        1) open files
+        2) save files
+        3) delete files
+*/
+
+struct Computer
+{
+    int processorCount = 4;
+    int ramCapacityGB = 16; 
+    int hardDriveCapacityGB = 2000;
+    std::string OperatingSystem = "Ubuntu 22.O4";
+    int usbPortCount = 4;
+
+    struct File
+    {
+        int sizeMB;
+        std::string fileName;
+        std::string fileType;
+        bool isWritable = true;
+        bool isProtected = true;
+
+        void erase(bool verify = true);
+
+        void copy(std::string destinationPath);
+
+        void move(std::string destinationPath);
+    };
+
+    void eraseFile(File file, bool verify = true);
+
+    void openFile(File file, std::string usingAppPath);
+
+    void writeFile(File file, std::string destinationPath, bool verify = true);
+
+    File file;
+};
+
+/*
+Thing 4) Midi Keyboard
+    5 properties:
+        1) number of keys (int)
+        2) number of pads (int)
+        3) number of knobs (int)
+        4) make (std::string)
+        5) model (std::string)
+    3 things it can do:
+        1) Send Midi Note Messages
+        2) Send Midi Control Change Messages
+        3) Send Midi Pitch Bend Messages
+*/
+
+struct MidiKeyboard
+{
+    int keyCount = 25;
+    int padCount = 8;
+    int knobCount = 8;
+    std::string make = "Akai";
+    std::string model = "MPK Mini";
+
+    void emitMidiNote(int noteNumber, int velocity, bool isNoteOn, int midiChannel);
+
+    void emitMidiControlChange(int ccNumber, int ccValue, int midiChannel);
+
+    void emitPithBend(int midiChannel, int pitchBendValue);
+};
+
+/*
+Thing 5) Oscillator
+    5 properties:
+        1) Frequency (hz) (double)
+        2) Waveform (std:string) //  or Enum?
+        3) Phase (degrees)(int)
+        4) Unison (voice count) (int)
+        5) Tuning (cents) (int)
+    3 things it can do:
+        1) Set the signal Waveform type
+        2) Set the number of Unison Voices
+        3) Set the output Frequency
+*/
+
+struct Oscillator
+{
+    double freqHz = 440.0;
+    std::string waveform = "sawtooth";
+    int phaseDeg = 0;
+    int unisonVoiceCount = 4;
+    int fineTuning = 0;
+
+    void setWaveform(std::string waveformType);
+
+    void setunisonVoiceCount(int voiceCount);
+
+    void setFreq(double freqHz);
+};
+
+/*
+Thing 6) Filter
+    5 properties:
+        1) Frequency/Cutoff (hz) (double)
+        2) Type (std::string) // or Enum?
+        3) Resonance (dB)(double)
+        4) Slope (dB/oct)(int)
+        5) Mix (Percent)(int)
+    3 things it can do:
+        1) Set the Filter Type
+        2) Set Resonance amount
+        3) Set Filter Cutoff frequency
+*/
+
+struct Filter
+{
+    double cutoffFreqHz= 200.0;
+    std::string type = "lowpass";
+    double resonanceDb = 0.5;
+    int slopeDbPerOct = 12;
+    int mixPercent = 100;
+
+    void setType(std::string filterType);
+
+    void setResonance(double resDb);
+
+    void setCutoffFreq(double freqHz);
+};
+
+/*
+Thing 7) Amp Envelope
+    5 properties:
+        1) Attack Time (ms) (float)
+        2) Hold Time (ms) (float)
+        3) Decay Time (ms) (float)
+        4) Sustain Level (float)
+        5) Release Time (ms) (float)
+    3 things it can do:
+        1) Set the Attack Time
+        2) Set the Sustain Level
+        3) Set the Release Time
+*/
+
+struct AmpEnvelope
+{
+    float attackTimeMs = 20.0f;
+    float holdTimeMs = 100.0f;
+    float decayTimeMs = 100.0f;
+    float sustainLevel = 0.5f;
+    float releaseTimeMs = 100.0f;
+
+    void setAttackTime(float millis);
+
+    void setSustainLevel(float level);
+
+    void setReleaseTime(float millis);
+};
+
+/*
+Thing 8) Filter Envelope
+    5 properties:
+        1) Attack Time (ms) (float)
+        2) Hold Time (ms) (float)
+        3) Decay Time (ms) (float)
+        4) Sustain Level (float)
+        5) Release Time (ms) (float)
+    3 things it can do:
+        1) Change the Attack Time
+        2) Change the Decay Time
+        3) Change the Hold Time
+*/
+
+struct FilterEnvelope
+{
+    float attackTimeMs = 20.0f;
+    float holdTimeMs = 100.0f;
+    float decayTimeMs = 100.0f;
+    float sustainLevel = 0.5f;
+    float releaseTimeMs = 100.0f;
+
+    void setAttackTime(float millis);
+
+    void setDecayTime(float millis);
+
+    void setHoldTime(float millis);
+};
+
+/*
+Thing 9) LFO
+    5 properties:
+        1) Waveform (std:string) // or Enum?
+        2) Phase (degrees)(int)
+        3) Repeat (bool)
+        4) Frequency (hz) (float)
+        5) Delay (ms) (float)
+    3 things it can do:
+        1) Output a modulation signal
+        2) Output various waveform types
+        3) Change the output signal frequency
+*/
+
+struct LFO
+{
+    std::string waveform = "triangle";
+    int phaseDeg = 0;
+    bool repeat = false;
+    float freqHz = 1.0f;
+    float delayMs = 0.0f;
+
+    void emitSignal();
+
+    void setWaveform(std::string waveformType);
+
+    void setFreq(float freqHz);
+};
+
+/*
+Thing 10) Synthesizer
+    5 properties:
+        1) Oscillator (Oscillator)
+        2) Filter (Filter)
+        3) Filter Envelope (Filter Envelope)
+        4) Amp Envelope (Amp Envelope)
+        5) LFO (LFO)
+    3 things it can do:
+        1) Generate sounds
+        2) Alter the frequency content of sounds
+        3) Alter the amplitude envelope of sounds
+*/
+
+struct Synthesizer
+{
+    Oscillator osc;
+    Filter filter;
+    FilterEnvelope filterEnv;
+    AmpEnvelope ampEnv;
+    LFO lfo;
+
+    void generateSound();
+
+    void setFilterParams(double cutoffFreqHz, double resDb, int slopeDbPerOct);
+
+    void setAmpEnvParams(float attackTimeMs, float holdTimeMs, float decayTimeMs, float sustainLevel, float releaseTimeMs);
+};
 
 /*
 =================
@@ -741,7 +972,7 @@ Be sure to make the commit message meaningful.
 */
 } //end namespace Part1E_Step7
 
-namespace Part1E_Step19
+namespace Part1E_Step9
 {
 /*
 =================
